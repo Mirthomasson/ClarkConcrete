@@ -94,6 +94,8 @@
     text-align: center;
     background: linear-gradient(to right, lightgrey, darkslategray);
     padding: 5em;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 #about-container {
@@ -109,8 +111,8 @@
 #about-container img {
     height: 30em;
     width: auto;
-    border-radius: .5em;
     margin-bottom: 1em;
+    box-shadow: 0 3px 10px rgba(246, 243, 243, 0.531);
 }
 
 .photo-title {
@@ -124,6 +126,102 @@
 .description {
     margin: 4em;
     text-align: center;
-    font-size: larger;
+    font-size: 1.4em;
     line-height: 1.5em;
+}
+
+
+/* -----Services----- */
+
+#services-title {
+    text-align: center;
+    background: linear-gradient(to right, lightgrey, darkslategray);
+    padding: 5em;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+#services-container {
+    background-color: slategray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 8em;
+}
+
+#services-container img {
+    height: 40em;
+    max-width: 40em;
+    width: auto;
+    margin: 6em;
+    box-shadow: 0 3px 10px rgba(246, 243, 243, 0.531);
+}
+
+.patios {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.patio-text {
+    margin: 0 4em;
+    line-height: 2em;
+    color: whitesmoke;
+    font-size: 1.1em;
+}
+
+.patio-text li {
+    margin: 0 4em;
+}
+
+.walkways {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.walkway-text {
+    margin: 0 4em;
+    line-height: 2em;
+    color: whitesmoke;
+    font-size: 1.1em;
+}
+
+.walkway-text li {
+    margin: 0 4em;
+}
+
+.basements {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.basement-text {
+    margin: 0 4em;
+    line-height: 2em;
+    color: whitesmoke;
+    font-size: 1.1em;
+}
+
+.finishes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.finish-text {
+    margin: 0 4em;
+    line-height: 2em;
+    color: whitesmoke;
+    font-size: 1.1em;
+}
+
+.finish-text li {
+    margin: 0 4em;
 }
