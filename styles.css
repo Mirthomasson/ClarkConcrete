@@ -5,6 +5,10 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 .topnav {
     overflow: hidden;
     background-color: #333;
@@ -151,8 +155,8 @@
 }
 
 #services-container img {
-    height: 40em;
-    max-width: 40em;
+    height: auto;
+    max-width: 25em;
     width: auto;
     margin: 6em;
     box-shadow: 0 3px 10px rgba(246, 243, 243, 0.531);
@@ -178,7 +182,7 @@
 
 .walkways {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
 }
@@ -210,7 +214,7 @@
 
 .finishes {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
 }
@@ -224,4 +228,32 @@
 
 .finish-text li {
     margin: 0 4em;
+}
+
+
+/* -----Media Queries----- */
+
+@media screen and (max-width: 600px) {
+
+    #about-container {
+        flex-direction: column;
+    }
+
+    .description {
+        margin: 1em -4em;
+        margin-bottom: 6em;
+        text-align: center;
+        font-size: 1.2em;
+        line-height: 1.5em;
+    }
+
+    .patios, .walkways, .basements, .finishes {
+        flex-direction: column;
+    }
+
+    .patio-text, .walkway-text, .basement-text, .finish-text {
+        margin: 0 5.75em;
+        font-size: 1em;
+    }
+
 }
