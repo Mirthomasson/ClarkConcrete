@@ -39,6 +39,12 @@ html {
   
   .topnav .icon {
     display: none;
+    padding: 0;
+  }
+
+  i.fa.fa-bars {
+    padding: 14px 16px;
+    margin: 0 auto;
   }
   
   @media screen and (max-width: 600px) {
@@ -46,6 +52,10 @@ html {
     .topnav a.icon {
       float: right;
       display: block;
+    }
+
+    #phone {
+      font-size: .9em;
     }
   }
   
