@@ -463,8 +463,24 @@ html {
   }
 
   .column img {
-    margin-top: -6em;
+    position: relative;
+    top: -15em;
     padding: 5em;
+  }
+
+  .column-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #333;
+    width: 50%;
+    margin: 0 auto;
+    padding: 1em;
+    color: whitesmoke;
+    line-height: 1.5em;
+    position: relative;
+    top: -25em;
   }
   
   /* Clear floats after the columns */
@@ -478,16 +494,27 @@ html {
   @media screen and (max-width: 600px) {
     .column, input[type=submit] {
       width: 100%;
-      margin-top: 0;
     }
   
     input[type=submit] {
       padding: .5em;
       margin-bottom: 2em;
     }
-  
+
     .container {
-      padding: 10em 2em;
+      padding: 0;
+      margin: 0;
+    }
+
+    .column img {
+      margin-top: 15em;
+      padding: 0;
+    }
+  
+    .column-text {
+      margin-top: 8em;
+      width: 100%;
+      margin-bottom: -15em;
     }
   
     .social-icons {
@@ -506,7 +533,7 @@ html {
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin: 10em;
+  margin: 4em 10em;
   color: black;
   background-color: white;
   font-size: 1.5em;
