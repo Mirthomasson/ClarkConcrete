@@ -412,6 +412,17 @@ html {
   to {opacity: 1}
 }
 
+/* -----Footer----- */
+
+footer { 
+  text-align: center; 
+  padding: 2em;
+}
+
+.cp-text { 
+  color: whitesmoke; 
+  text-shadow: 0 1px rgba(255, 255, 255, 0.1);
+}
 
 /* -----Media Queries----- */
 
