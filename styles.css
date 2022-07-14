@@ -7,6 +7,7 @@
 
 html {
     overflow-x: hidden;
+    background-color: #333;
 }
 
 .topnav {
@@ -22,11 +23,13 @@ html {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    transition: ease 1s;
   }
   
   .topnav a:hover {
     background-color: #ddd;
     color: black;
+    transition: ease 1s;
   }
   
   .topnav a.active {
@@ -64,6 +67,7 @@ html {
     background-image: url(./images/clark-banner.jpeg);
     background-repeat: no-repeat;
     background-position: center;
+    background-attachment: fixed;
     background-size: cover;
     height: 100vh;
     width: 100%;
@@ -231,29 +235,244 @@ html {
 }
 
 
+/* -----Gallery----- */
+
+.gallery-banner {
+  background-image: url(./images/gallery-banner.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+.gallery-title {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  background-color: rgba(187, 187, 187, 0.669);
+  margin: 0 10em;
+  position: relative;
+  top: 12em;
+  box-shadow: 0 3px 10px rgba(246, 243, 243, 0.531);
+}
+
+.gallery-title h1 {
+  padding: .5em;
+  background: linear-gradient(to right, lightgrey, darkslategray);
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.gallery-title p {
+  padding: 2em;
+  margin-left: 9em;
+  line-height: 1.5em;
+  text-align: right;
+  font-size: 1.1em;
+  background: linear-gradient(to right, lightgrey, darkslategray, 0.6);
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+#about-title-2 {
+  text-align: center;
+  background: linear-gradient(to right, lightgrey, darkslategray);
+  padding: 5em;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+
+.reasons-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 1em;
+}
+
+.reason-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #71717196;
+  padding: 1.5em;
+  margin: 1em;
+}
+
+.reason-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #71717196;
+  padding: 1.5em;
+  margin: 1.5em;
+}
+
+.reason-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #71717196;
+  padding: 1.5em;
+  margin: 1em;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  margin-top: 3em;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  margin-bottom: 3em;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
 /* -----Media Queries----- */
 
 @media screen and (max-width: 600px) {
+
+  * {
+    overflow-x: hidden;
+  }
+
+  .logo {
+    height: 20em;
+  }
 
     #about-container {
         flex-direction: column;
     }
 
+    #about-container img {
+      margin: 2em;
+    } 
+
     .description {
-        margin: 1em -4em;
-        margin-bottom: 6em;
-        text-align: center;
         font-size: 1.2em;
-        line-height: 1.5em;
+        margin: 0 -6em 4em -6em;
     }
 
     .patios, .walkways, .basements, .finishes {
         flex-direction: column;
     }
 
-    .patio-text, .walkway-text, .basement-text, .finish-text {
-        margin: 0 5.75em;
-        font-size: 1em;
+    #services-container {
+      margin: 1em -10em;
+    }
+
+    #services-container img {
+      width: 75%;
+    }
+
+    #services-container li {
+      margin: 0;
+      list-style-position: inside;
+    }
+
+    .gallery-title {
+      margin: 1em;
+      text-align: center;
+      margin-bottom: 5em;
+      top: 2em;
+    }
+
+    .gallery-title p {
+      margin: 0;
+    }
+
+    .reasons-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    #about-title-2 {
+      margin: 1em -4em;
     }
 
 }
